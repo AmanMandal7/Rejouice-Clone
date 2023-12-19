@@ -15,6 +15,7 @@ page1.addEventListener("mousemove", function (dets) {
     console.log(xVal);
 
     gsap.to(cursor, {
+        opacity: 1,
         x: lerp(-150, val.width + 150, xVal),
         y: lerp(-100, val.height + 100, yVal),
         duration: .3,
@@ -23,9 +24,19 @@ page1.addEventListener("mousemove", function (dets) {
 
 })
 
-
-
-window.addEventListener("mouseleave", function (dets) {
-
+page1.addEventListener("mouseenter", function () {
+    gsap.to(cursor, {
+        scale: 1,
+        opacity: 1
+    })
 })
+
+page1.addEventListener("mouseleave", function () {
+    gsap.to(cursor, {
+        scale: 0,
+        opacity: 0
+    })
+})
+
+
 

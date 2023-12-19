@@ -21,6 +21,7 @@ body {
   height: 100%;
 }
 
+/*--------------------------------PAGE1------------------------------------ */
 .page1 {
   height: 100vh;
   width: 100%;
@@ -48,6 +49,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: 0;
 }
 
 .cursor p {
@@ -132,3 +134,11 @@ nav h3 {
   }
 }
 
+/*--------------------------------PAGE2------------------------------------ */
+.page2 {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  background-color: rosybrown;
+}
