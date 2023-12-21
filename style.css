@@ -230,13 +230,32 @@ nav h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: red;
 }
 
 .page3bottom .boxes .box {
   width: 32.5%;
   height: 100%;
-  background-color: purple;
+  position: relative;
+  cursor: pointer;
+}
+
+.page3bottom .boxes .box img {
+  width: 101%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  transition: all ease 0.6s;
+}
+.page3bottom .boxes .box:hover img {
+  opacity: 0;
+}
+
+.page3bottom .boxes .box video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 
