@@ -46,7 +46,6 @@ function cursorAnimation() {
         var ybottom = Math.floor(val.bottom);
         var xVal = gsap.utils.mapRange(xleft, xright, 0, 1, dets.clientX);
         var yVal = gsap.utils.mapRange(ytop, ybottom, 0, 1, dets.clientY);
-        console.log(xVal);
 
         gsap.to(cursor, {
             opacity: 1,
@@ -75,6 +74,42 @@ function cursorAnimation() {
 cursorAnimation();
 
 
+function page2Animation() {
+    var tl = gsap.timeline();
+    tl.from(".page2 .upper p", {
+        y: 120,
+        duration: 0.6,
+        scrollTrigger: {
+            trigger: ".page2",
+            scroller: ".main",
+            start: "top 80%",
+            end: "top 80%",
+            scrub: 1
+        }
+    }).from(".page2 .content p", {
+        y: 120,
+        opacity: 0,
+        duration: 1,
+        scrollTrigger: {
+            trigger: ".page2",
+            scroller: ".main",
+            start: "top 70%",
+            end: "top 70%",
+            scrub: 1,
+        }
+    })
 
-
-
+    gsap.from(".line", {
+        x: -800,
+        duration: 0.1,
+        ease: Power4,
+        scrollTrigger: {
+            trigger: ".page2",
+            scroller: ".main",
+            start: "top 80%",
+            end: "top 80%",
+            scrub: 10
+        }
+    })
+}
+page2Animation();
