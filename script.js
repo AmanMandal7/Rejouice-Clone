@@ -115,7 +115,8 @@ function page2Animation() {
 page2Animation();
 
 
-function page3Animation() {
+function page4Animation() {
+    //UPPER TEXT ANIMATION
     var tl = gsap.timeline();
     tl.from(".page4 .upper p", {
         y: 120,
@@ -151,42 +152,109 @@ function page3Animation() {
             end: "top 80%",
             scrub: 10
         }
+    });
+
+
+    //cIRCLE ANIMATION
+    const cursorField = document.querySelector(".cursorField");
+    const circle = document.querySelector(".circle");
+
+    cursorField.addEventListener("mousemove", function (dets) {
+
+        gsap.to(circle, {
+            x: dets.x,
+            y: dets.y,
+            duration: .3,
+            ease: Power4,
+        })
+
+    });
+
+    cursorField.addEventListener("mouseenter", function () {
+        gsap.to(circle, {
+            duration: 0.4,
+            opacity: 1,
+            scale: 1,
+            rotation: 0,
+            ease: Power1,
+        })
+    })
+
+    cursorField.addEventListener("mouseleave", function () {
+        gsap.to(circle, {
+            opacity: 0,
+            scale: 0,
+            rotate: -50,
+            ease: Power1,
+        })
+    })
+
+    //SEAT AVAILABLE ANIMATION
+    const seatAvaNum = document.querySelectorAll(".page4 .animation .text h2 span p")
+    
+    gsap.to(seatAvaNum, {
+        y: "-400%",
+        scrollTrigger: {
+            trigger: ".page4",
+            scroller: ".main",
+            start: "top 20%",
+            end: "top 20%",
+            scrub: 6
+        }
+
     })
 }
-page3Animation();
+page4Animation();
 
 
 
+var tl = gsap.timeline();
+tl.from(".page5 .upper p", {
+    y: 120,
+    duration: 0.6,
+    scrollTrigger: {
+        trigger: ".page5",
+        scroller: ".main",
+        start: "top 80%",
+        end: "top 80%",
+        scrub: 1
+    }
+}).from(".page5 .content p", {
+    y: 120,
+    opacity: 0,
+    duration: 1,
+    scrollTrigger: {
+        trigger: ".page5",
+        scroller: ".main",
+        start: "top 70%",
+        end: "top 70%",
+        scrub: 1,
+    }
+})
 
-const cursorField = document.querySelector(".cursorField");
-const circle = document.querySelector(".circle");
-
-cursorField.addEventListener("mousemove", function (dets) {
-
-    gsap.to(circle, {
-        x: dets.x,
-        y: dets.y,
-        duration: .3,
-        ease: Power4,
-    })
-
+gsap.from(".page5 .line", {
+    x: -800,
+    duration: 0.1,
+    ease: Power4,
+    scrollTrigger: {
+        trigger: ".page5",
+        scroller: ".main",
+        start: "top 80%",
+        end: "top 80%",
+        scrub: 10
+    }
 });
 
-cursorField.addEventListener("mouseenter", function () {
-    gsap.to(circle, {
-        duration: 0.4,
-        opacity: 1,
-        scale: 1,
-        rotation: 0,
-        ease: Power1,
-    })
-})
-
-cursorField.addEventListener("mouseleave", function () {
-    gsap.to(circle, {
-        opacity: 0,
-        scale: 0,
-        rotate: -50,
-        ease: Power1,
-    })
-})
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
