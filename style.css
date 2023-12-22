@@ -381,18 +381,17 @@ nav h3 {
 
 .page5 .swiperDiv {
   width: 100%;
-  height: 50vh;
+  height: 28vw;
 }
 
 .swiper {
-  width: 100%;
+  width: 130%;
   height: 100%;
 }
 
 .swiper-slide {
   text-align: center;
-  font-size: 18px;
-  background: #fff;
+  background: #6f6c6c;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -400,17 +399,14 @@ nav h3 {
 
 .swiper-slide img {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 20%;
   object-fit: cover;
 }
 
-.swiper {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
+/* .swiper-slide img {
+  margin-right: 1vw;
+  width: 23vw;
+} */
 
 /*--------------------------------FOOTER------------------------------------ */
 footer {
