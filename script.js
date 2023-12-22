@@ -141,7 +141,7 @@ function page3Animation() {
     })
 
     gsap.from(".page4 .line", {
-        x:-800,
+        x: -800,
         duration: 0.1,
         ease: Power4,
         scrollTrigger: {
@@ -154,3 +154,39 @@ function page3Animation() {
     })
 }
 page3Animation();
+
+
+
+
+const cursorField = document.querySelector(".cursorField");
+const circle = document.querySelector(".circle");
+
+cursorField.addEventListener("mousemove", function (dets) {
+
+    gsap.to(circle, {
+        x: dets.x,
+        y: dets.y,
+        duration: .3,
+        ease: Power4,
+    })
+
+});
+
+cursorField.addEventListener("mouseenter", function () {
+    gsap.to(circle, {
+        duration: 0.4,
+        opacity: 1,
+        scale: 1,
+        rotation: 0,
+        ease: Power1,
+    })
+})
+
+cursorField.addEventListener("mouseleave", function () {
+    gsap.to(circle, {
+        opacity: 0,
+        scale: 0,
+        rotate: -50,
+        ease: Power1,
+    })
+})
