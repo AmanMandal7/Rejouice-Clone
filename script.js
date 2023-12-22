@@ -99,7 +99,7 @@ function page2Animation() {
         }
     })
 
-    gsap.from(".line", {
+    gsap.from(".page2 .line", {
         x: -800,
         duration: 0.1,
         ease: Power4,
@@ -113,3 +113,44 @@ function page2Animation() {
     })
 }
 page2Animation();
+
+
+function page3Animation() {
+    var tl = gsap.timeline();
+    tl.from(".page4 .upper p", {
+        y: 120,
+        duration: 0.6,
+        scrollTrigger: {
+            trigger: ".page4",
+            scroller: ".main",
+            start: "top 80%",
+            end: "top 80%",
+            scrub: 1
+        }
+    }).from(".page4 .content p", {
+        y: 120,
+        opacity: 0,
+        duration: 1,
+        scrollTrigger: {
+            trigger: ".page4",
+            scroller: ".main",
+            start: "top 70%",
+            end: "top 70%",
+            scrub: 1,
+        }
+    })
+
+    gsap.from(".page4 .line", {
+        x:-800,
+        duration: 0.1,
+        ease: Power4,
+        scrollTrigger: {
+            trigger: ".page4",
+            scroller: ".main",
+            start: "top 80%",
+            end: "top 80%",
+            scrub: 10
+        }
+    })
+}
+page3Animation();
