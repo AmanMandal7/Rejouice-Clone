@@ -1,3 +1,31 @@
+// function loaderAnimation() {
+//     var tl = gsap.timeline();
+
+//     tl.from(".loader h3", {
+//         x: 200,
+//         opacity: 0,
+//         duration: 2,
+//         stagger: 0.05,
+//         ease: 'expo.out',
+//     })
+//     tl.to(".loader h3", {
+//         x: -30,
+//         opacity: 0,
+//         duration: 0.3,
+//         stagger: 0.1,
+//         ease: 'power2.in',
+//     })
+//     tl.to(".loader", {
+//         opacity: 0,
+//         duration: 2
+//     })
+//     tl.to(".loader", {
+//         display: "none"
+//     })
+// }
+// loaderAnimation();
+
+
 function locomotiveScroller() {
     gsap.registerPlugin(ScrollTrigger);
 
