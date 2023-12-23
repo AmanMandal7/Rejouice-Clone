@@ -247,14 +247,11 @@ gsap.from(".page5 .line", {
 
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
-    spaceBetween: 30,
+    spaceBetween: 0,
     loop: true,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
+    freeMode: true,
+    // autoplay: {
+    //     delay: 2000,
+    //     disableOnInteraction: true,
+    // },
 });

@@ -380,33 +380,28 @@ nav h3 {
 }
 
 .page5 .swiperDiv {
+  margin-top: -6vw;
+  cursor: pointer;
   width: 100%;
   height: 28vw;
 }
 
 .swiper {
-  width: 130%;
+  width: 112%;
   height: 100%;
 }
 
 .swiper-slide {
-  text-align: center;
-  background: #6f6c6c;
+  background: #67646400;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .swiper-slide img {
-  display: block;
-  width: 20%;
-  object-fit: cover;
-}
-
-/* .swiper-slide img {
   margin-right: 1vw;
-  width: 23vw;
-} */
+  width: 21vw;
+}
 
 /*--------------------------------FOOTER------------------------------------ */
 footer {
