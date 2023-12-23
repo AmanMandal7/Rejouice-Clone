@@ -191,7 +191,7 @@ function page4Animation() {
 
     //SEAT AVAILABLE ANIMATION
     const seatAvaNum = document.querySelectorAll(".page4 .animation .text h2 span p")
-    
+
     gsap.to(seatAvaNum, {
         y: "-400%",
         scrollTrigger: {
@@ -206,52 +206,50 @@ function page4Animation() {
 }
 page4Animation();
 
+function page5Animation() {
+    var tl = gsap.timeline();
+    tl.from(".page5 .upper p", {
+        y: 120,
+        duration: 0.6,
+        scrollTrigger: {
+            trigger: ".page5",
+            scroller: ".main",
+            start: "top 80%",
+            end: "top 80%",
+            scrub: 1
+        }
+    }).from(".page5 .content p", {
+        y: 120,
+        opacity: 0,
+        duration: 1,
+        scrollTrigger: {
+            trigger: ".page5",
+            scroller: ".main",
+            start: "top 70%",
+            end: "top 70%",
+            scrub: 1,
+        }
+    })
 
+    gsap.from(".page5 .line", {
+        x: -800,
+        duration: 0.1,
+        ease: Power4,
+        scrollTrigger: {
+            trigger: ".page5",
+            scroller: ".main",
+            start: "top 80%",
+            end: "top 80%",
+            scrub: 10
+        }
+    });
 
-var tl = gsap.timeline();
-tl.from(".page5 .upper p", {
-    y: 120,
-    duration: 0.6,
-    scrollTrigger: {
-        trigger: ".page5",
-        scroller: ".main",
-        start: "top 80%",
-        end: "top 80%",
-        scrub: 1
-    }
-}).from(".page5 .content p", {
-    y: 120,
-    opacity: 0,
-    duration: 1,
-    scrollTrigger: {
-        trigger: ".page5",
-        scroller: ".main",
-        start: "top 70%",
-        end: "top 70%",
-        scrub: 1,
-    }
-})
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        loop: true,
+        freeMode: true
+    });
+}
+page5Animation();
 
-gsap.from(".page5 .line", {
-    x: -800,
-    duration: 0.1,
-    ease: Power4,
-    scrollTrigger: {
-        trigger: ".page5",
-        scroller: ".main",
-        start: "top 80%",
-        end: "top 80%",
-        scrub: 10
-    }
-});
-
-var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1,
-    spaceBetween: 0,
-    loop: true,
-    freeMode: true,
-    // autoplay: {
-    //     delay: 2000,
-    //     disableOnInteraction: true,
-    // },
-});
