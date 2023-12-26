@@ -30,33 +30,33 @@ function locomotiveScroller() {
 }
 locomotiveScroller();
 
-// function loaderAnimation() {
-//     var tl = gsap.timeline();
+function loaderAnimation() {
+    var tl = gsap.timeline();
 
-//     tl.from(".loader h3", {
-//         x: 150,
-//         opacity: 0,
-//         delay: 1,
-//         duration: 2,
-//         stagger: 0.05,
-//         ease: 'expo.out',
-//     })
-//     tl.to(".loader h3", {
-//         x: -30,
-//         opacity: 0,
-//         duration: 0.3,
-//         stagger: 0.1,
-//         ease: 'power2.in',
-//     })
-//     tl.to(".loader", {
-//         opacity: 0,
-//         duration: 2
-//     })
-//     tl.to(".loader", {
-//         display: "none"
-//     })
-// }
-// loaderAnimation();
+    tl.from(".loader h3", {
+        x: 150,
+        opacity: 0,
+        delay: 1,
+        duration: 2,
+        stagger: 0.05,
+        ease: 'expo.out',
+    })
+    tl.to(".loader h3", {
+        x: -30,
+        opacity: 0,
+        duration: 0.3,
+        stagger: 0.1,
+        ease: 'power2.in',
+    })
+    tl.to(".loader", {
+        opacity: 0,
+        duration: 2
+    })
+    tl.to(".loader", {
+        display: "none"
+    })
+}
+loaderAnimation();
 
 function cursorAnimation() {
     const page1 = document.querySelector(".page1");
@@ -112,12 +112,11 @@ function mainLettersAnimation() {
     })
 
     gsap.from(mainPageletters, {
-        y: 100,
+        y: 270,
         delay: 4,
-        opacity: 0,
-        duration: 0.3,
+        duration: 1,
         ease: 'power1',
-        stagger: 0.1
+        stagger: 0.08
     })
 }
 mainLettersAnimation();
@@ -302,39 +301,42 @@ function page5Animation() {
 page5Animation();
 
 
-gsap.from(".footer .upper", {
-    y: -100,
-    opacity: 0,
-    scrollTrigger: {
-        trigger: ".footer",
-        scroller: ".main",
-        start: "top 60%",
-        end: "bottom 90%",
-        scrub: 1
-    }
-});
+function footerAnimation() {
+    gsap.from(".footer .upper", {
+        y: -100,
+        opacity: 0,
+        scrollTrigger: {
+            trigger: ".footer",
+            scroller: ".main",
+            start: "top 60%",
+            end: "bottom 90%",
+            scrub: 1
+        }
+    });
 
-gsap.from(".footer .lower", {
-    y: -100,
-    opacity: 0,
-    scrollTrigger: {
-        trigger: ".footer",
-        scroller: ".main",
-        start: "top 60%",
-        end: "bottom 90%",
-        scrub: 1
-    }
-});
+    gsap.from(".footer .lower", {
+        y: -100,
+        opacity: 0,
+        scrollTrigger: {
+            trigger: ".footer",
+            scroller: ".main",
+            start: "top 60%",
+            end: "bottom 90%",
+            scrub: 1
+        }
+    });
 
-gsap.from(".footer-title h1 span", {
-    y: -140,
-    stagger: 0.1,
-    scrollTrigger: {
-        trigger: ".footer",
-        scroller: ".main",
-        start: "top 10%",
-        end: "bottom 100%",
-        scrub: 5
-    }
-    
-})
+    gsap.from(".footer-title h1 span", {
+        y: -300,
+        stagger: 0.1,
+        scrollTrigger: {
+            trigger: ".footer",
+            scroller: ".main",
+            start: "top 10%",
+            end: "bottom 100%",
+            scrub: 5
+        }
+
+    })
+}
+footerAnimation();
