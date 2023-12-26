@@ -456,6 +456,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;
 }
 
 .footer .footer-info {
@@ -532,6 +533,7 @@ footer {
   margin-top: 3vw;
   width: 100%;
   height: 40%;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 1050px) {

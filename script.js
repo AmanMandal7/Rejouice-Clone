@@ -302,3 +302,39 @@ function page5Animation() {
 page5Animation();
 
 
+gsap.from(".footer .upper", {
+    y: -100,
+    opacity: 0,
+    scrollTrigger: {
+        trigger: ".footer",
+        scroller: ".main",
+        start: "top 60%",
+        end: "bottom 90%",
+        scrub: 1
+    }
+});
+
+gsap.from(".footer .lower", {
+    y: -100,
+    opacity: 0,
+    scrollTrigger: {
+        trigger: ".footer",
+        scroller: ".main",
+        start: "top 60%",
+        end: "bottom 90%",
+        scrub: 1
+    }
+});
+
+gsap.from(".footer-title h1 span", {
+    y: -140,
+    stagger: 0.1,
+    scrollTrigger: {
+        trigger: ".footer",
+        scroller: ".main",
+        start: "top 10%",
+        end: "bottom 100%",
+        scrub: 5
+    }
+    
+})
