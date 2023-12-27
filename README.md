@@ -1,28 +1,46 @@
 ## Cynthia Ugwu - Clone
 
-It's a clone of Cynthia Ugwu Website with some cool animations
+It's a clone of Awarded Rejouice website. Most of the animations are cloned with its responsiveness.
 
 ## 🔗 Link To The Webpage
 
-https://amanmandal7.github.io/Cynthia-Ugwu/
+https://amanmandal7.github.io/Rejouice/
 
 ## Tech Stack
 
-**Frontend:** HTML, CSS & JavaScript
+**Frontend:** HTML, CSS, JavaScript, GSAP, Locomotive Scroll & SwiperJS
 
 ## Some Screenshots
 
+- Loader Page
+  ![App Screenshot](https://github.com/AmanMandal7/Rejouice-Clone/blob/master/Screen%20Shots/01%20Loader%20Page.png)
+
 - Home Page
-  ![App Screenshot](https://github.com/AmanMandal7/CynthiaUgwu-Clone/blob/master/Screenshots/Home%20page.png)
+  ![App Screenshot](https://github.com/AmanMandal7/Rejouice-Clone/blob/master/Screen%20Shots/02%20Home%20Page.png)
 
-- Scrollabel Image - 1
-  ![App Screenshot](https://github.com/AmanMandal7/CynthiaUgwu-Clone/blob/master/Screenshots/Scrollable%20image%201.png)
+- SS 3
+  ![App Screenshot](https://github.com/AmanMandal7/Rejouice-Clone/blob/master/Screen%20Shots/03.png)
 
-- Scrollabel Image - 2
-  ![App Screenshot](https://github.com/AmanMandal7/CynthiaUgwu-Clone/blob/master/Screenshots/Scrollable%20image%202.png)
+- SS 4
+  ![App Screenshot](https://github.com/AmanMandal7/Rejouice-Clone/blob/master/Screen%20Shots/04.png)
 
-- About Section
-  ![App Screenshot](https://github.com/AmanMandal7/CynthiaUgwu-Clone/blob/master/Screenshots/About%20section.png)
+- SS 5
+  ![App Screenshot](https://github.com/AmanMandal7/Rejouice-Clone/blob/master/Screen%20Shots/05.png)
+
+- SS 6 Responsive
+  ![App Screenshot](https://github.com/AmanMandal7/Rejouice-Clone/blob/master/Screen%20Shots/06.png)
+
+- SS 7
+  ![App Screenshot](https://github.com/AmanMandal7/Rejouice-Clone/blob/master/Screen%20Shots/07.png)
+
+- SS 8 Responsive
+  ![App Screenshot](https://github.com/AmanMandal7/Rejouice-Clone/blob/master/Screen%20Shots/08.png)
+
+- Footer
+  ![App Screenshot](https://github.com/AmanMandal7/Rejouice-Clone/blob/master/Screen%20Shots/09%20Footer.png)
+
+- Footer Responsive
+  ![App Screenshot](https://github.com/AmanMandal7/Rejouice-Clone/blob/master/Screen%20Shots/10%20Footer%20Responsive.png)
 
 ## 🔗 Links
 
