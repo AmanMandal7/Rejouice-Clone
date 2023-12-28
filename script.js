@@ -30,33 +30,33 @@ function locomotiveScroller() {
 }
 locomotiveScroller();
 
-function loaderAnimation() {
-    var tl = gsap.timeline();
+// function loaderAnimation() {
+//     var tl = gsap.timeline();
 
-    tl.from(".loader h3", {
-        x: 150,
-        opacity: 0,
-        delay: 1,
-        duration: 2,
-        stagger: 0.05,
-        ease: 'expo.out',
-    })
-    tl.to(".loader h3", {
-        x: -30,
-        opacity: 0,
-        duration: 0.3,
-        stagger: 0.1,
-        ease: 'power2.in',
-    })
-    tl.to(".loader", {
-        opacity: 0,
-        duration: 2
-    })
-    tl.to(".loader", {
-        display: "none"
-    })
-}
-loaderAnimation();
+//     tl.from(".loader h3", {
+//         x: 150,
+//         opacity: 0,
+//         delay: 1,
+//         duration: 2,
+//         stagger: 0.05,
+//         ease: 'expo.out',
+//     })
+//     tl.to(".loader h3", {
+//         x: -30,
+//         opacity: 0,
+//         duration: 0.3,
+//         stagger: 0.1,
+//         ease: 'power2.in',
+//     })
+//     tl.to(".loader", {
+//         opacity: 0,
+//         duration: 2
+//     })
+//     tl.to(".loader", {
+//         display: "none"
+//     })
+// }
+// loaderAnimation();
 
 function cursorAnimation() {
     const page1 = document.querySelector(".page1");
@@ -207,10 +207,11 @@ function page4Animation() {
     const circle = document.querySelector(".circle");
 
     cursorField.addEventListener("mousemove", function (dets) {
+        console.log(dets.offsetX, dets.offsetY);
 
         gsap.to(circle, {
-            x: dets.x,
-            y: dets.y,
+            x: dets.offsetX,
+            y: dets.offsetY + 165,
             duration: .3,
             ease: Power4,
         })
